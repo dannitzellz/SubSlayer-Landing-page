@@ -12,7 +12,8 @@
     --dark-gray: #4E5461;      /* Usado para: Texto general */
     --white: #ffffff;          /* Usado para: Fondos de tarjetas */
     --black: #000000;          /* Usado para: Títulos principales */
-    --bg-light: #f4f5f7;       
+    --bg-light: #f4f5f7;   
+    --light-gray: #ddd;    
 }
 
 * {
@@ -163,6 +164,44 @@ body {
     text-decoration: none;
 }
 
+.pricing-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+.card{
+    background-color: var(--white);
+    width: 300px;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-highlight {
+    border: 2px solid var(--accent-green);
+    transform: scale(1.05);
+}
+
+.card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 8px;
+}
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
