@@ -82,6 +82,11 @@ h1, h2, h3 {
 
 .hero-section {
     background-color: var(--bg-light); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/subs.webp");
+    color: var(--white);
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
     padding: 100px 20px;
     display: flex;
@@ -91,7 +96,7 @@ h1, h2, h3 {
 
 .hero-content h2 {
     font-size: 3rem;
-    color: var(--black); 
+    color: var(--white); 
     margin-bottom: 1rem;
 }
 
@@ -223,25 +228,106 @@ h1, h2, h3 {
 }
 
 .review-card {
+    position: relative;
     background-color: white;
-    padding: 20px;
+    padding: 30px 20px;
     border-radius: 8px;
     border: 1px solid #ddd;
     width: 300px;
-    font-style: italic;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: left; 
+}
+
+.quote-icon {
+    position: absolute;
+    top: 2px;
+    right: 20px;     
+    font-size: 4rem;
+    color: var(--light-gray);
+    font-family: serif;
+    line-height: 1;
+    pointer-events: none; 
+}
+
+.author-info {
+    display: flex;
+    align-items: center; 
+    gap: 15px;           
+    margin-top: 20px;
+}
+
+.author-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;  
+    border: 2px solid var(--main-blue);
+}
+
+.author {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.author small {
+    font-weight: normal;
+    color: var(--dark-gray);
+    font-size: 0.8em;
 }
 
 #featured-review {
     background-color: var(--strong-purple);
     color: var(--white);
-    transform: scale(1,1);
-    font-weight: bold;
+    border: none;
+    transform: scale(1.05); 
 }
 
-.author {
-    margin-top: 15px;
-    font-style: initial;
-    font-size: 0.9em;
+#featured-review .quote-icon {
+    color: rgba(255, 255, 255, 0.3); 
+}
+
+#featured-review .author small {
+    color: #ddd;
+}
+
+#featured-review .author-img {
+    border-color: var(--accent-green);
+}
+
+
+html {
+    scroll-behavior: smooth; 
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    background-color: var(--dark-gray);
+    color: var(--white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-decoration: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 2000; 
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s, background-color 0.3s;
+}
+
+.scroll-top:hover {
+    opacity: 1;
+    transform: translateY(-3px); 
+    background-color: var(--main-blue);
 }
 
 /* --- RESPONSIVE --- */
