@@ -152,13 +152,44 @@
     </section>
 
 
-    <footer class="main-footer">
+    
+    <footer id="contact" class="main-footer">
         <p>&copy; 2025 SubSlayer. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#termsModal">Términos y Condiciones</a>
+        </div>
         <div class="social-links">
             <a href="#">Twitter</a>
             <a href="#">Instagram</a>
         </div>
     </footer>
+
+    <input type="checkbox" id="cookie-toggle">
+
+    <div class="cookie-banner">
+        <div class="cookie-content">
+            <p>🍪 Usamos cookies para mejorar tu experiencia.</p>
+            <div class="cookie-actions">
+                <label for="cookie-toggle" class="btn-cookie btn-outline">Rechazar</label>
+                <label for="cookie-toggle" class="btn-cookie btn-fill">Aceptar</label>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal-overlay">
+        <div class="modal-content">
+            <a href="#" class="close-modal-btn">&times;</a>
+            <h2>Términos y Condiciones</h2>
+            <div class="modal-body">
+                <p>Bienvenido a SubSlayer. Al usar nuestra plataforma, aceptas nuestros términos.</p>
+                <p>1. Datos seguros y encriptados.</p>
+                <p>2. Puedes cancelar cuando quieras.</p>
+            </div>
+            <a href="#" class="btn btn-primary" style="margin-top:0;">Entendido</a>
+        </div>
+    </div>
+
+    <a href="#top" class="scroll-top" title="Volver arriba">↑</a>
 
 </body>
 </html>
