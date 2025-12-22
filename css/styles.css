@@ -94,6 +94,19 @@ h1, h2, h3 {
     margin-top: 20px;
     box-shadow: 0 4px 10px rgba(112, 146, 224, 0.3); 
     transition: background 0.3s, transform 0.2s;
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(178, 230, 90, 0.7); 
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(178, 230, 90, 0); 
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(178, 230, 90, 0);
+    }
 }
 
 .btn-primary:hover {
@@ -391,7 +404,17 @@ html {
         transform: rotate(-45deg) translate(5px, -6px);
     }
 
-    .hero-overlay h1 { font-size: 2rem; }
+    .hero-overlay h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, #ffffff 0%, var(--accent-green) 100%);
+        -webkit-background-clip: text;          
+        -webkit-text-fill-color: transparent;  
+        background-clip: text;
+        color: transparent;
+        
+        display: inline-block; 
+    }
     .newsletter-form { flex-direction: column; }
     .email-input, .btn-subscribe { width: 100%; }
 }
